@@ -84,24 +84,6 @@ export default function Hero() {
             Download Resume
           </a>
         </motion.div>
-
-        {/* Tech Stack Badges */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1.2 }}
-          className="mt-16 flex flex-wrap items-center justify-center gap-3"
-        >
-          {['React', 'TypeScript', 'Node.js', 'NestJS', 'Express'].map((tech) => (
-            <span
-              key={tech}
-              className="glass rounded-full px-4 py-1.5 text-xs font-medium tracking-wide"
-              style={{ color: 'var(--color-text-muted)' }}
-            >
-              {tech}
-            </span>
-          ))}
-        </motion.div>
       </div>
 
       {/* Scroll Indicator */}
