@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FiArrowDown, FiDownload } from 'react-icons/fi';
+import { FiDownload } from 'react-icons/fi';
 
 export default function Hero() {
   return (

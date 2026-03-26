@@ -24,7 +24,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={link.label}
-              className="text-lg transition-colors duration-200 hover:text-[var(--color-text-primary)]"
+              className="text-lg transition-colors duration-200 hover:text-text-primary"
               style={{ color: 'var(--color-text-muted)' }}
             >
               {link.icon}

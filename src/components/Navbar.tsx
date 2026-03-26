@@ -67,7 +67,7 @@ export default function Navbar({ onActivateCLI }: NavbarProps) {
             <li key={link.href}>
               <button
                 onClick={() => handleClick(link.href)}
-                className="relative text-sm font-medium tracking-wide transition-colors duration-200 hover:text-[var(--color-text-primary)]"
+                className="relative text-sm font-medium tracking-wide transition-colors duration-200 hover:text-text-primary"
                 style={{ color: 'var(--color-text-muted)' }}
               >
                 {link.label}
@@ -120,7 +120,7 @@ export default function Navbar({ onActivateCLI }: NavbarProps) {
                 <li key={link.href}>
                   <button
                     onClick={() => handleClick(link.href)}
-                    className="w-full rounded-lg px-4 py-3 text-left text-sm font-medium transition-colors hover:bg-[var(--color-bg-tertiary)]"
+                    className="w-full rounded-lg px-4 py-3 text-left text-sm font-medium transition-colors hover:bg-bg-tertiary"
                     style={{ color: 'var(--color-text-muted)' }}
                   >
                     {link.label}

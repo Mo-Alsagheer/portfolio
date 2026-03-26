@@ -86,7 +86,7 @@ export default function Contact() {
                       {info.href ? (
                         <a
                           href={info.href}
-                          className="text-sm transition-colors hover:text-[var(--color-text-primary)]"
+                          className="text-sm transition-colors hover:text-text-primary"
                           style={{ color: 'var(--color-text-primary)' }}
                         >
                           {info.value}
@@ -111,7 +111,7 @@ export default function Contact() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={link.label}
-                    className="flex h-10 w-10 items-center justify-center rounded-lg text-lg transition-all duration-200 hover:bg-[var(--color-bg-tertiary)] hover:text-[var(--color-text-primary)]"
+                    className="flex h-10 w-10 items-center justify-center rounded-lg text-lg transition-all duration-200 hover:bg-bg-tertiary hover:text-text-primary"
                     style={{ backgroundColor: 'rgba(50, 49, 51, 0.5)', color: 'var(--color-text-muted)' }}
                   >
                     {link.icon}
@@ -140,7 +140,7 @@ export default function Contact() {
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full rounded-xl border bg-transparent px-4 py-3 text-sm outline-none transition-colors duration-200 focus:border-[var(--color-text-muted)]"
+                    className="w-full rounded-xl border bg-transparent px-4 py-3 text-sm outline-none transition-colors duration-200 focus:border-text-muted"
                     style={{
                       borderColor: 'var(--color-bg-tertiary)',
                       color: 'var(--color-text-primary)',
@@ -164,7 +164,7 @@ export default function Contact() {
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full rounded-xl border bg-transparent px-4 py-3 text-sm outline-none transition-colors duration-200 focus:border-[var(--color-text-muted)]"
+                    className="w-full rounded-xl border bg-transparent px-4 py-3 text-sm outline-none transition-colors duration-200 focus:border-text-muted"
                     style={{
                       borderColor: 'var(--color-bg-tertiary)',
                       color: 'var(--color-text-primary)',
@@ -188,7 +188,7 @@ export default function Contact() {
                     rows={5}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full resize-none rounded-xl border bg-transparent px-4 py-3 text-sm outline-none transition-colors duration-200 focus:border-[var(--color-text-muted)]"
+                    className="w-full resize-none rounded-xl border bg-transparent px-4 py-3 text-sm outline-none transition-colors duration-200 focus:border-text-muted"
                     style={{
                       borderColor: 'var(--color-bg-tertiary)',
                       color: 'var(--color-text-primary)',

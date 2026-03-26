@@ -85,7 +85,7 @@ export default function Skills() {
                   {cat.skills.map((skill) => (
                     <div
                       key={skill.name}
-                      className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm transition-colors duration-200 hover:bg-[var(--color-bg-tertiary)]"
+                      className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm transition-colors duration-200 hover:bg-bg-tertiary"
                       style={{
                         backgroundColor: 'rgba(50, 49, 51, 0.3)',
                         color: 'var(--color-text-muted)',

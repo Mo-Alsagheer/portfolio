@@ -58,7 +58,7 @@ export default function Projects() {
                 whileHover={{ y: -6 }}
                 transition={{ type: 'spring', stiffness: 300, damping: 20 }}
                 className={`glass glass-hover glow-hover group flex h-full flex-col rounded-2xl p-6 transition-all duration-300 ${
-                  project.featured ? 'ring-1 ring-[var(--color-bg-tertiary)]' : ''
+                  project.featured ? 'ring-1 ring-bg-tertiary' : ''
                 }`}
               >
                 {/* Header */}
@@ -75,7 +75,7 @@ export default function Projects() {
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-lg transition-colors hover:text-[var(--color-text-primary)]"
+                        className="text-lg transition-colors hover:text-text-primary"
                         style={{ color: 'var(--color-text-muted)' }}
                         aria-label={`${project.title} source code`}
                       >
@@ -87,7 +87,7 @@ export default function Projects() {
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-lg transition-colors hover:text-[var(--color-text-primary)]"
+                        className="text-lg transition-colors hover:text-text-primary"
                         style={{ color: 'var(--color-text-muted)' }}
                         aria-label={`${project.title} live demo`}
                       >
@@ -99,7 +99,7 @@ export default function Projects() {
 
                 {/* Title & Description */}
                 <h3
-                  className="font-display text-lg font-semibold group-hover:text-[var(--color-text-primary)]"
+                  className="font-display text-lg font-semibold group-hover:text-text-primary"
                   style={{ color: 'var(--color-text-primary)' }}
                 >
                   {project.title}
