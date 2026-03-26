@@ -57,7 +57,9 @@ export default function Navbar({ onActivateCLI }: NavbarProps) {
       animate={hidden ? "hidden" : "visible"}
       transition={{ duration: 0.4, ease: 'easeInOut' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-500 ${
-        scrolled ? 'glass-strong shadow-lg backdrop-blur-xl bg-bg-primary/80' : 'bg-transparent'
+        scrolled 
+          ? 'shadow-lg max-md:bg-bg-primary md:glass-strong md:backdrop-blur-xl md:bg-bg-primary/80' 
+          : 'max-md:bg-bg-primary md:bg-transparent'
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-end px-6 py-4 md:justify-center">
@@ -112,7 +114,7 @@ export default function Navbar({ onActivateCLI }: NavbarProps) {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="glass-strong border-t md:hidden"
+            className="bg-bg-primary border-t md:hidden"
             style={{ borderColor: 'var(--color-glass-border)' }}
           >
             <ul className="flex flex-col gap-1 px-6 py-4">
