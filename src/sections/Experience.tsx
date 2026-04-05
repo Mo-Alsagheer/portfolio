@@ -12,6 +12,36 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
+    title: 'Academic Team Lead',
+    company: '3C Coding School',
+    period: 'Sep 2024 – Present',
+    description: [
+      'Directed a team of instructors by providing continuous mentorship, rigorous evaluations, and tailored development',
+      'Designed and implemented comprehensive programming curricula aligning with industry standards',
+    ],
+    type: 'work',
+  },
+  {
+    title: 'Web Development Instructor',
+    company: '3C Coding School',
+    period: 'Feb 2024 – Present',
+    description: [
+      'Taught frontend and backend development to students of varying age groups and skill levels',
+      'Delivered engaging lessons that enabled students to build and deploy responsive web applications',
+    ],
+    type: 'work',
+  },
+  {
+    title: 'Coding Instructor',
+    company: '3C Coding School',
+    period: 'Jul 2023 – Present',
+    description: [
+      'Designed and delivered age-appropriate coding curricula for over 300 students, improving assessment scores',
+      'Conducted interactive workshops producing over 50 fully functional applications, tools, and games',
+    ],
+    type: 'work',
+  },
+  {
     title: 'Cloud Services Management & Operation',
     company: 'National Telecom Institute (NTI)',
     period: 'Jul 2025 – Sep 2025',
@@ -33,42 +63,12 @@ const experiences: ExperienceItem[] = [
     type: 'work',
   },
   {
-    title: 'Team Lead',
-    company: '3C Coding School',
-    period: 'Sep 2024 – Present',
-    description: [
-      'Directed a team of instructors by providing continuous mentorship, rigorous evaluations, and tailored development',
-      'Designed and implemented comprehensive programming curricula aligning with industry standards',
-    ],
-    type: 'work',
-  },
-  {
-    title: 'Web Development Instructor',
-    company: '3C Coding School',
-    period: 'Feb 2024 – Present',
-    description: [
-      'Taught frontend and backend development to students of varying age groups and skill levels',
-      'Delivered engaging lessons that enabled students to build and deploy responsive web applications',
-    ],
-    type: 'work',
-  },
-  {
     title: 'Information Technology Intern',
     company: 'Gemsa Petroleum Company',
     period: 'Sep 2023 – Oct 2023',
     description: [
       'Gained practical experience supporting technical operations, troubleshooting issues, and resolving IT support needs',
       'Worked on improving system efficiency and ensuring smooth technical workflows',
-    ],
-    type: 'work',
-  },
-  {
-    title: 'Coding Instructor',
-    company: '3C Coding School',
-    period: 'Jul 2023 – Present',
-    description: [
-      'Designed and delivered age-appropriate coding curricula for over 300 students, improving assessment scores',
-      'Conducted interactive workshops producing over 50 fully functional applications, tools, and games',
     ],
     type: 'work',
   },
