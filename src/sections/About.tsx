@@ -5,7 +5,7 @@ import { FiCode, FiBriefcase, FiUsers } from 'react-icons/fi';
 
 const stats = [
   { icon: <FiCode className="text-xl" />, value: '50+', label: 'Apps Produced' },
-  { icon: <FiBriefcase className="text-xl" />, value: '2+', label: 'Years Experience' },
+  { icon: <FiBriefcase className="text-xl" />, value: '3+', label: 'Years Experience' },
   { icon: <FiUsers className="text-xl" />, value: '300+', label: 'Students Taught' },
 ];
 

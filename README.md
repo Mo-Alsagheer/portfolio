@@ -1,73 +1,118 @@
-# React + TypeScript + Vite
+# Mohamed Alsagheer — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal portfolio website built with **React 19**, **TypeScript**, and **Vite**. Features a polished GUI experience alongside a fully functional **Developer Mode CLI terminal** — two ways to explore the same content.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- **Dual-mode experience** — Switch between the visual GUI and a full CLI terminal (Developer Mode)
+- **Interactive terminal** — Supports commands like `sudo about`, `sudo skills`, `sudo projects`, `sudo experience`, `sudo contact`, `sudo download-cv`, and more
+- **Smooth animations** — Page transitions and scroll-triggered animations powered by Framer Motion
+- **Responsive design** — Fully optimized for mobile, tablet, and desktop
+- **Smart navbar** — Auto-hides on scroll, reappears on scroll-up, stays visible when the mobile menu is open
+- **Glassmorphism UI** — Premium glass-card components with hover glow effects
+- **Dark theme** — Custom CSS design system with CSS variables for consistent theming
+- **CV download** — Direct resume download from both GUI and CLI
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🗂️ Sections
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| Section | Description |
+|---|---|
+| **Hero** | Intro with name, title, availability badge, and CTA buttons |
+| **About** | Personal background and overview |
+| **Skills** | Frontend, Backend, and Tools & Infrastructure technology cards |
+| **Projects** | Featured projects with live links and GitHub repos |
+| **Experience** | Professional timeline |
+| **Contact** | Contact form and social links |
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🚀 Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+| Category | Technologies |
+|---|---|
+| **Framework** | React 19, TypeScript, Vite |
+| **Styling** | Tailwind CSS v4, Vanilla CSS, CSS Variables |
+| **Animations** | Framer Motion |
+| **Icons** | React Icons (Simple Icons, Feather Icons) |
+| **Terminal** | Custom CLI built with React hooks |
+
+---
+
+## 🖥️ Developer Mode (CLI)
+
+The portfolio includes a custom terminal emulator accessible via the **"Developer Mode"** button in the navbar.
+
+```
+guest@mohamed:~$ sudo help
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Available commands (require `sudo`):
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+| Command | Alias | Description |
+|---|---|---|
+| `sudo about` | `sudo a` | Personal background |
+| `sudo skills` | `sudo s` | Tech stack overview |
+| `sudo projects` | `sudo p` | Featured projects |
+| `sudo experience` | `sudo e` | Work experience |
+| `sudo contact` | `sudo c` | Contact information |
+| `sudo download-cv` | `sudo cv` | Downloads the CV as PDF |
+| `clear` | `cls` | Clears the terminal |
+| `quit` | `q` | Returns to GUI mode |
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+> Commands without `sudo` will return a **Permission denied** error by design.
+
+---
+
+## 📦 Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
 ```
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── components/
+│   ├── AnimatedSection.tsx   # Scroll-triggered fade-in wrapper
+│   ├── Footer.tsx
+│   ├── GlassCard.tsx         # Reusable glassmorphism card
+│   ├── Navbar.tsx            # Responsive navbar with Developer Mode button
+│   ├── SectionHeading.tsx
+│   └── Terminal.tsx          # Full CLI terminal emulator
+├── sections/
+│   ├── Hero.tsx
+│   ├── About.tsx
+│   ├── Skills.tsx
+│   ├── Projects.tsx
+│   ├── Experience.tsx
+│   └── Contact.tsx
+├── utils/
+│   └── cliData.ts            # CLI command responses
+├── App.tsx                   # GUI / CLI mode switcher
+├── index.css                 # Global design system & CSS variables
+└── main.tsx
+```
+
+---
+
+## 📬 Contact
+
+**Mohamed Alsagheer** · Software Engineer  
+[GitHub](https://github.com/Mo-Alsagheer) · Available for Work
