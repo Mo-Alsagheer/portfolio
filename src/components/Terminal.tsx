@@ -19,7 +19,7 @@ const Spinner = () => {
   useEffect(() => {
     const timer = setInterval(() => setFrame((f) => (f + 1) % frames.length), 100);
     return () => clearInterval(timer);
-  }, []);
+  }, [frames.length]);
 
   return <span className="text-blue-400 mr-2">{frames[frame]}</span>;
 };
@@ -61,7 +61,7 @@ Type 'quit' to return to the interactive portfolio.`
 
     // Determine if user invoked sudo
     const isSudo = inputParts[0] === 'sudo';
-    let rawCmd = isSudo ? inputParts[1] : inputParts[0];
+    const rawCmd = isSudo ? inputParts[1] : inputParts[0];
 
     // If sudo was called with no trailing command
     if (isSudo && !rawCmd) {
@@ -154,15 +154,18 @@ Type 'quit' to return to the interactive portfolio.`
   };
 
   return (
-    <div className="crt relative min-h-screen bg-black font-mono text-white p-6 selection:bg-white selection:text-black">
-      <div className="relative z-10 max-w-4xl mx-auto flex flex-col gap-5 text-base sm:text-lg leading-loose">
+    <div className="crt relative min-h-screen bg-black font-mono text-white px-3 py-4 sm:p-6 selection:bg-white selection:text-black">
+      <div className="relative z-10 max-w-4xl mx-auto flex flex-col gap-4 text-xs sm:text-base leading-relaxed sm:leading-loose">
         
         {/* Terminal History */}
         {history.map((entry, index) => (
           <div key={index} className="flex flex-col gap-2">
             {entry.command && (
-              <div className="flex items-center gap-2">
-                <span className="text-blue-400">guest@mohamed:~$</span>
+              <div className="flex items-center gap-1 sm:gap-2 flex-wrap">
+                <span className="text-blue-400 whitespace-nowrap">
+                  <span className="hidden sm:inline">guest@mohamed:~$</span>
+                  <span className="sm:hidden">$</span>
+                </span>
                 <span>{entry.command}</span>
               </div>
             )}
@@ -180,8 +183,11 @@ Type 'quit' to return to the interactive portfolio.`
         ))}
 
         {/* Active Input Line */}
-        <form onSubmit={handleCommand} className="flex items-center gap-2 mt-2">
-          <span className="text-blue-400 whitespace-nowrap">guest@mohamed:~$</span>
+        <form onSubmit={handleCommand} className="flex items-center gap-1 sm:gap-2 mt-2">
+          <span className="text-blue-400 whitespace-nowrap">
+            <span className="hidden sm:inline">guest@mohamed:~$</span>
+            <span className="sm:hidden">$</span>
+          </span>
           <div className="relative flex-1 flex items-center">
             <input
               ref={inputRef}

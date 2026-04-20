@@ -1,12 +1,12 @@
 import AnimatedSection from '../components/AnimatedSection';
 import SectionHeading from '../components/SectionHeading';
 import GlassCard from '../components/GlassCard';
-import { FiCode, FiBriefcase, FiUsers } from 'react-icons/fi';
+import { FiUserCheck, FiBriefcase, FiUsers } from 'react-icons/fi';
 
 const stats = [
-  { icon: <FiCode className="text-xl" />, value: '50+', label: 'Apps Produced' },
+  { icon: <FiUserCheck className="text-xl" />, value: '200+', label: 'Instructors Trained' },
   { icon: <FiBriefcase className="text-xl" />, value: '3+', label: 'Years Experience' },
-  { icon: <FiUsers className="text-xl" />, value: '300+', label: 'Students Taught' },
+  { icon: <FiUsers className="text-xl" />, value: '500+', label: 'Students Taught' },
 ];
 
 export default function About() {

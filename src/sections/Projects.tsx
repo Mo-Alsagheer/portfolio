@@ -32,9 +32,9 @@ const projects: Project[] = [
     featured: true,
   },
   {
-    title: 'Student Activity Management System (SAMS)',
+    title: 'IEEE Platform',
     description:
-      'SAMS is a web-based platform designed to centralize and streamline the management of student activity seasons. The system covers the entire activity lifecycle, including recruitment, committee management, and performance monitoring.',
+      'A comprehensive web-based platform for managing IEEE student activities, including recruitment, committee management, and performance monitoring.',
     tech: ['React 19', 'Node.js', 'Express', 'Sequelize', 'FastAPI', 'PostgreSQL', 'NestJS'],
     liveUrl: '#',
     githubUrl: 'https://github.com/Mo-Alsagheer/SAMS',
